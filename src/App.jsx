@@ -12,13 +12,23 @@ function App() {
 
   return (
     <Appcontext.Provider>
-      <div className='selectOptions'>
+      <div className='helaSidan'>
+        <div className='selectOptions'>
+          <div>
+            <div className='selectOptionBtn'>
+              <p>Content</p>
+            </div>
+            <div className='selectOptionBtn'>
+              <p>Customize</p>
+            </div>
+          </div>
+        </div>
         {selectedOption === "Content" ? 
-        <Content />
-        : <Customize/>
-        }
+          <Content />
+          : <Customize className="customize"/>
+          }
+      <Result />
       </div>
-    <Result />
     </Appcontext.Provider>
   )
 }
