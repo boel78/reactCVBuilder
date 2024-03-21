@@ -1,14 +1,15 @@
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 import { ArrowUp, ArrowDown} from "@phosphor-icons/react"
 
-export const Personalinfo = () => {
-  const [show, setShow] = useState(true);
+export const Education = () => {
+    const [show, setShow] = useState(true)
   return (
     <div className ="personalInfo" onClick={() => setShow(!show)}>
-      <div className="infoHeader">
-          <h2>Personal info</h2>
+    <div className="infoHeader">
+          <h2>Education</h2>
           {show ? <ArrowDown size="25"/> : <ArrowUp size="25"/>}
-      </div>
+    </div>
       { show ?
         <form>
           <div>
@@ -35,6 +36,6 @@ export const Personalinfo = () => {
         :
         <></>
       }
-    </div>
-  );
-};
+      </div>
+  )
+}
